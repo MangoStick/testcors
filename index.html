@@ -23,11 +23,11 @@
                 }),
                 crossDomain: true,
                 type: 'dataType',
-				// beforeSend: function(xhr) {
-				// 	xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
-				// 	xhr.setRequestHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
-				// 	xhr.setRequestHeader('Access-Control-Allow-Headers', 'Content-Type, appVersion');
-				// },
+				beforeSend: function(xhr) {
+					xhr.setRequestHeader('Access-Control-Request-Origin', '*');
+					xhr.setRequestHeader('Access-Control-Request-Methods', 'POST');
+					xhr.setRequestHeader('Access-Control-Request-Headers', 'Content-Type, App-Version');
+				},
 				success: function(response) {},
 				error: function(xhr, status, error) {}
 			});
