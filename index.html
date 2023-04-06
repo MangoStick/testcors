@@ -11,7 +11,8 @@
                 headers: {
                     'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8',
 					'appVersion': '1.7.9',
-					'Access-Control-Request-Method': 'POST'
+					'Access-Control-Request-Method': 'POST',
+					'Access-Control-Allow-Origin': 'https://mangostick.github.io'
 				},
 				data: JSON.stringify({
                     "phoneNumber": "0911444403", 
@@ -21,11 +22,11 @@
                 }),
                 crossDomain: true,
                 type: 'dataType',
-				beforeSend: function(xhr) {
-					xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
-					xhr.setRequestHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
-					xhr.setRequestHeader('Access-Control-Allow-Headers', 'Content-Type, appVersion');
-				},
+				// beforeSend: function(xhr) {
+				// 	xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
+				// 	xhr.setRequestHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+				// 	xhr.setRequestHeader('Access-Control-Allow-Headers', 'Content-Type, appVersion');
+				// },
 				success: function(response) {},
 				error: function(xhr, status, error) {}
 			});
