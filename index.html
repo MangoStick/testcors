@@ -20,6 +20,11 @@
                 }),
                 crossDomain: true,
                 type: 'dataType',
+				beforeSend: function(xhr) {
+					xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
+					xhr.setRequestHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+					xhr.setRequestHeader('Access-Control-Allow-Headers', 'Content-Type, appVersion');
+				},
 				success: function(response) {},
 				error: function(xhr, status, error) {}
 			});
