@@ -10,7 +10,7 @@
 				method: "POST",
                 headers: {
                     'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8',
-					'App-Version': '1.7.9',
+					'appVersion': '1.7.9',
 				},
 				data: JSON.stringify({
                     "phoneNumber": "0911444403", 
@@ -20,11 +20,6 @@
                 }),
                 crossDomain: true,
                 type: 'dataType',
-				// beforeSend: function(xhr) {
-				// 	xhr.setRequestHeader('Access-Control-Request-Origin', '*');
-				// 	xhr.setRequestHeader('Access-Control-Request-Methods', 'POST');
-				// 	xhr.setRequestHeader('Access-Control-Request-Headers', 'Content-Type, App-Version');
-				// },
 				success: function(response) {},
 				error: function(xhr, status, error) {}
 			});
